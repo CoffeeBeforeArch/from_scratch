@@ -94,9 +94,14 @@ int main(){
     cudaDeviceSynchronize();
 
     // Verify the result on the CPU
-    //verify_result(a, b, c, N);
+    verify_result(a, b, c, N);
 
     cout << "PROGRAM COMPLETED SUCCESSFULLY!" << endl;
+    
+    // Free allocated memory
+    cudaFree(a);
+    cudaFree(b);
+    cudaFree(c);
 
     return 0;
 }

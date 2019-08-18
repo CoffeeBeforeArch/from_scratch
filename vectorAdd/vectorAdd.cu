@@ -59,6 +59,11 @@ int main(){
     verify_solution(a, b, c, N);
 
     cout << "PROGRAM COMPLETED CORRECTLY!" << endl;
+    
+    // Free allocated memory
+    cudaFree(a);
+    cudaFree(b);
+    cudaFree(c);
 
     return 0;
 }
