@@ -53,7 +53,7 @@ void verify_result(int *a, int *b, int *c, int N){
 
 int main(){
     // Set our square matrix dimension (2^10 x 2^10 default) 
-    int N = (1 << 10) + 1;
+    int N = 1 << 10;
     size_t bytes = N * N * sizeof(int);
 
     // Allocate memory for our matrices
